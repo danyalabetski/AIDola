@@ -1,0 +1,903 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44EAFF3990311387E300A876 /* Pods_AIDola.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED15F3995E7CBD451A6989D /* Pods_AIDola.framework */; };
+		B916386A2FE41686001E0709 /* AIDolaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638682FE41686001E0709 /* AIDolaApp.swift */; };
+		B916386D2FE4168A001E0709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B916386B2FE4168A001E0709 /* Assets.xcassets */; };
+		B91638762FE41717001E0709 /* AIChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638732FE41717001E0709 /* AIChatCoordinator.swift */; };
+		B91638782FE41789001E0709 /* AIChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638772FE41789001E0709 /* AIChatViewModel.swift */; };
+		B916387A2FE417A7001E0709 /* AIChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638792FE417A7001E0709 /* AIChatView.swift */; };
+		B91638812FE41811001E0709 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916387C2FE41811001E0709 /* CoordinatorView.swift */; };
+		B91638822FE41811001E0709 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916387B2FE41811001E0709 /* BaseCoordinator.swift */; };
+		B91638832FE41811001E0709 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916387D2FE41811001E0709 /* Tab.swift */; };
+		B91638892FE41A4D001E0709 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638872FE41A4D001E0709 /* DeviceHelper.swift */; };
+		B91638922FE41B45001E0709 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916388F2FE41B45001E0709 /* MainTabView.swift */; };
+		B91638932FE41B45001E0709 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916388E2FE41B45001E0709 /* MainCoordinator.swift */; };
+		B91638942FE41B45001E0709 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916388C2FE41B45001E0709 /* MainViewModel.swift */; };
+		B91638952FE41B45001E0709 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916388A2FE41B45001E0709 /* MainView.swift */; };
+		B91638982FE41DA3001E0709 /* ImagesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638972FE41DA3001E0709 /* ImagesEnum.swift */; };
+		B916389C2FE42516001E0709 /* AskAnythingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916389B2FE42516001E0709 /* AskAnythingTextField.swift */; };
+		B916389E2FE4258A001E0709 /* TypealiasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916389D2FE4258A001E0709 /* TypealiasHelper.swift */; };
+		B91638A02FE425C4001E0709 /* Extension_Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916389F2FE425C4001E0709 /* Extension_Color.swift */; };
+		B91638A22FE427B7001E0709 /* Extension_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638A12FE427B7001E0709 /* Extension_View.swift */; };
+		B91638A42FE427E0001E0709 /* Extension_UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638A32FE427E0001E0709 /* Extension_UIView.swift */; };
+		B91638A62FE4A486001E0709 /* ChatAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638A52FE4A486001E0709 /* ChatAPIService.swift */; };
+		B91638AB2FE54ED7001E0709 /* ChatHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638AA2FE54ED7001E0709 /* ChatHistoryView.swift */; };
+		B91638AD2FE54EF4001E0709 /* ChatHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638AC2FE54EF4001E0709 /* ChatHistoryViewModel.swift */; };
+		B91638AF2FE551D4001E0709 /* HistoryChatAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638AE2FE551D4001E0709 /* HistoryChatAPIService.swift */; };
+		B91638B12FE554CB001E0709 /* KeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638B02FE554CB001E0709 /* KeysManager.swift */; };
+		B91638B62FE59442001E0709 /* VideoGenerationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638B52FE59442001E0709 /* VideoGenerationViewModel.swift */; };
+		B91638B82FE59466001E0709 /* VideoGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638B72FE59466001E0709 /* VideoGenerationView.swift */; };
+		B91638BA2FE594B1001E0709 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638B92FE594B1001E0709 /* NavigationBar.swift */; };
+		B91638BC2FE597F4001E0709 /* GenerationVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638BB2FE597F4001E0709 /* GenerationVideoService.swift */; };
+		B91638BE2FE5C0ED001E0709 /* VideoThumbnailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638BD2FE5C0ED001E0709 /* VideoThumbnailService.swift */; };
+		B91638C02FE5C610001E0709 /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638BF2FE5C610001E0709 /* PhotoLibraryManager.swift */; };
+		B91638C22FE5C911001E0709 /* SettingsGenerationVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638C12FE5C911001E0709 /* SettingsGenerationVideoView.swift */; };
+		B91638C52FE5D502001E0709 /* VideoGenerationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638C42FE5D502001E0709 /* VideoGenerationModel.swift */; };
+		B91638C72FE5DF43001E0709 /* PopupPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638C62FE5DF43001E0709 /* PopupPicker.swift */; };
+		B9210D5B2FE5F08100D8196C /* GenerationVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D5A2FE5F08100D8196C /* GenerationVideoModel.swift */; };
+		B9210D5D2FE5FBC900D8196C /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D5C2FE5FBC900D8196C /* LoadingScreen.swift */; };
+		B9210D5F2FE6032F00D8196C /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D5E2FE6032F00D8196C /* ResultView.swift */; };
+		B9210D612FE6152000D8196C /* HistoryVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D602FE6152000D8196C /* HistoryVideoView.swift */; };
+		B9210D642FE6181500D8196C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D632FE6181500D8196C /* CoreDataStack.swift */; };
+		B9210D662FE6183300D8196C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D652FE6183300D8196C /* CoreDataManager.swift */; };
+		B9210D692FE6185B00D8196C /* VideoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9210D672FE6185B00D8196C /* VideoModel.xcdatamodeld */; };
+		B9210D6E2FE61AE500D8196C /* HistoryVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D6D2FE61AE500D8196C /* HistoryVideoViewModel.swift */; };
+		B9210D732FE61EA600D8196C /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D722FE61EA600D8196C /* PaywallView.swift */; };
+		B9210D752FE6208F00D8196C /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D742FE6208F00D8196C /* PaywallViewModel.swift */; };
+		B9210D7E2FE628C300D8196C /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D7C2FE628C300D8196C /* SubscriptionManager.swift */; };
+		B9210D812FE6290E00D8196C /* Extension_SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9210D802FE6290E00D8196C /* Extension_SKProduct.swift */; };
+		B9BA48A32FE6391200015547 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA48A22FE6391200015547 /* AppLauncher.swift */; };
+		B9BA48A72FE639CD00015547 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA48A62FE639CD00015547 /* LoadingView.swift */; };
+		B9BA48A92FE63A7800015547 /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA48A82FE63A7800015547 /* AppStorageManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28D56B702ED9B0BB0217763E /* Pods-AIDola.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDola.release.xcconfig"; path = "Target Support Files/Pods-AIDola/Pods-AIDola.release.xcconfig"; sourceTree = "<group>"; };
+		AED15F3995E7CBD451A6989D /* Pods_AIDola.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIDola.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B91638512FE4162C001E0709 /* AIDola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIDola.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B91638682FE41686001E0709 /* AIDolaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDolaApp.swift; sourceTree = "<group>"; };
+		B916386B2FE4168A001E0709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B91638732FE41717001E0709 /* AIChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatCoordinator.swift; sourceTree = "<group>"; };
+		B91638772FE41789001E0709 /* AIChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatViewModel.swift; sourceTree = "<group>"; };
+		B91638792FE417A7001E0709 /* AIChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatView.swift; sourceTree = "<group>"; };
+		B916387B2FE41811001E0709 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		B916387C2FE41811001E0709 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		B916387D2FE41811001E0709 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		B91638872FE41A4D001E0709 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		B916388A2FE41B45001E0709 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B916388C2FE41B45001E0709 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B916388E2FE41B45001E0709 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B916388F2FE41B45001E0709 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B91638972FE41DA3001E0709 /* ImagesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesEnum.swift; sourceTree = "<group>"; };
+		B916389B2FE42516001E0709 /* AskAnythingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAnythingTextField.swift; sourceTree = "<group>"; };
+		B916389D2FE4258A001E0709 /* TypealiasHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypealiasHelper.swift; sourceTree = "<group>"; };
+		B916389F2FE425C4001E0709 /* Extension_Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_Color.swift; sourceTree = "<group>"; };
+		B91638A12FE427B7001E0709 /* Extension_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_View.swift; sourceTree = "<group>"; };
+		B91638A32FE427E0001E0709 /* Extension_UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_UIView.swift; sourceTree = "<group>"; };
+		B91638A52FE4A486001E0709 /* ChatAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAPIService.swift; sourceTree = "<group>"; };
+		B91638AA2FE54ED7001E0709 /* ChatHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryView.swift; sourceTree = "<group>"; };
+		B91638AC2FE54EF4001E0709 /* ChatHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryViewModel.swift; sourceTree = "<group>"; };
+		B91638AE2FE551D4001E0709 /* HistoryChatAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryChatAPIService.swift; sourceTree = "<group>"; };
+		B91638B02FE554CB001E0709 /* KeysManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysManager.swift; sourceTree = "<group>"; };
+		B91638B52FE59442001E0709 /* VideoGenerationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGenerationViewModel.swift; sourceTree = "<group>"; };
+		B91638B72FE59466001E0709 /* VideoGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGenerationView.swift; sourceTree = "<group>"; };
+		B91638B92FE594B1001E0709 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		B91638BB2FE597F4001E0709 /* GenerationVideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationVideoService.swift; sourceTree = "<group>"; };
+		B91638BD2FE5C0ED001E0709 /* VideoThumbnailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThumbnailService.swift; sourceTree = "<group>"; };
+		B91638BF2FE5C610001E0709 /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
+		B91638C12FE5C911001E0709 /* SettingsGenerationVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGenerationVideoView.swift; sourceTree = "<group>"; };
+		B91638C42FE5D502001E0709 /* VideoGenerationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGenerationModel.swift; sourceTree = "<group>"; };
+		B91638C62FE5DF43001E0709 /* PopupPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupPicker.swift; sourceTree = "<group>"; };
+		B9210D5A2FE5F08100D8196C /* GenerationVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationVideoModel.swift; sourceTree = "<group>"; };
+		B9210D5C2FE5FBC900D8196C /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		B9210D5E2FE6032F00D8196C /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		B9210D602FE6152000D8196C /* HistoryVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVideoView.swift; sourceTree = "<group>"; };
+		B9210D632FE6181500D8196C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B9210D652FE6183300D8196C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B9210D682FE6185B00D8196C /* VideoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoModel.xcdatamodel; sourceTree = "<group>"; };
+		B9210D6D2FE61AE500D8196C /* HistoryVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVideoViewModel.swift; sourceTree = "<group>"; };
+		B9210D722FE61EA600D8196C /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		B9210D742FE6208F00D8196C /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
+		B9210D7C2FE628C300D8196C /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		B9210D802FE6290E00D8196C /* Extension_SKProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_SKProduct.swift; sourceTree = "<group>"; };
+		B9BA48A22FE6391200015547 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
+		B9BA48A62FE639CD00015547 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B9BA48A82FE63A7800015547 /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
+		D7C0ABAD893E4E63EF869268 /* Pods-AIDola.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDola.debug.xcconfig"; path = "Target Support Files/Pods-AIDola/Pods-AIDola.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B916384E2FE4162C001E0709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44EAFF3990311387E300A876 /* Pods_AIDola.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C311AAAE6BF10CA7FDAB6D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7C0ABAD893E4E63EF869268 /* Pods-AIDola.debug.xcconfig */,
+				28D56B702ED9B0BB0217763E /* Pods-AIDola.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B91638482FE4162C001E0709 = {
+			isa = PBXGroup;
+			children = (
+				B91638622FE4163D001E0709 /* AIDola */,
+				B91638522FE4162C001E0709 /* Products */,
+				5C311AAAE6BF10CA7FDAB6D3 /* Pods */,
+				FF2FB8839F13A66720116FFA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B91638522FE4162C001E0709 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B91638512FE4162C001E0709 /* AIDola.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B91638622FE4163D001E0709 /* AIDola */ = {
+			isa = PBXGroup;
+			children = (
+				B91638692FE41686001E0709 /* App */,
+				B916386E2FE4169A001E0709 /* Views */,
+				B916389A2FE424FF001E0709 /* CustomUI */,
+				B91638852FE41A4D001E0709 /* Services */,
+				B91638862FE41A4D001E0709 /* Managers */,
+				B91638882FE41A4D001E0709 /* Helpers */,
+				B91638992FE42185001E0709 /* Enums */,
+				B91638962FE41D85001E0709 /* Extensions */,
+				B916387F2FE41811001E0709 /* Coordinator */,
+				B916386C2FE4168A001E0709 /* Resources */,
+			);
+			path = AIDola;
+			sourceTree = "<group>";
+		};
+		B91638692FE41686001E0709 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B91638682FE41686001E0709 /* AIDolaApp.swift */,
+				B9BA48A22FE6391200015547 /* AppLauncher.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B916386C2FE4168A001E0709 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B916386B2FE4168A001E0709 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B916386E2FE4169A001E0709 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9BA48A42FE639B600015547 /* StateAppViews */,
+				B91638912FE41B45001E0709 /* Main */,
+				B916386F2FE416AD001E0709 /* AIChat */,
+				B91638A72FE54EB7001E0709 /* ChatHistory */,
+				B91638B22FE59421001E0709 /* VideoGeneration */,
+				B9210D6A2FE61AB700D8196C /* HistoryVideo */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B916386F2FE416AD001E0709 /* AIChat */ = {
+			isa = PBXGroup;
+			children = (
+				B91638702FE416B7001E0709 /* View */,
+				B91638712FE416BB001E0709 /* ViewModel */,
+				B91638722FE416CC001E0709 /* Coordinator */,
+			);
+			path = AIChat;
+			sourceTree = "<group>";
+		};
+		B91638702FE416B7001E0709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B91638792FE417A7001E0709 /* AIChatView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B91638712FE416BB001E0709 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B91638772FE41789001E0709 /* AIChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B91638722FE416CC001E0709 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B91638732FE41717001E0709 /* AIChatCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B916387F2FE41811001E0709 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B916387B2FE41811001E0709 /* BaseCoordinator.swift */,
+				B916387C2FE41811001E0709 /* CoordinatorView.swift */,
+				B916387D2FE41811001E0709 /* Tab.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B91638852FE41A4D001E0709 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B91638A52FE4A486001E0709 /* ChatAPIService.swift */,
+				B91638AE2FE551D4001E0709 /* HistoryChatAPIService.swift */,
+				B91638BB2FE597F4001E0709 /* GenerationVideoService.swift */,
+				B91638BD2FE5C0ED001E0709 /* VideoThumbnailService.swift */,
+				B9210D592FE5F06900D8196C /* Models */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B91638862FE41A4D001E0709 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B9BA48A82FE63A7800015547 /* AppStorageManager.swift */,
+				B9210D7C2FE628C300D8196C /* SubscriptionManager.swift */,
+				B91638B02FE554CB001E0709 /* KeysManager.swift */,
+				B91638BF2FE5C610001E0709 /* PhotoLibraryManager.swift */,
+				B9210D622FE617FA00D8196C /* DataBase */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B91638882FE41A4D001E0709 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B916389D2FE4258A001E0709 /* TypealiasHelper.swift */,
+				B91638872FE41A4D001E0709 /* DeviceHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B916388B2FE41B45001E0709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B916388A2FE41B45001E0709 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B916388D2FE41B45001E0709 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B916388C2FE41B45001E0709 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B91638902FE41B45001E0709 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B916388E2FE41B45001E0709 /* MainCoordinator.swift */,
+				B916388F2FE41B45001E0709 /* MainTabView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B91638912FE41B45001E0709 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B916388B2FE41B45001E0709 /* View */,
+				B916388D2FE41B45001E0709 /* ViewModel */,
+				B91638902FE41B45001E0709 /* Coordinator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B91638962FE41D85001E0709 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D802FE6290E00D8196C /* Extension_SKProduct.swift */,
+				B916389F2FE425C4001E0709 /* Extension_Color.swift */,
+				B91638A12FE427B7001E0709 /* Extension_View.swift */,
+				B91638A32FE427E0001E0709 /* Extension_UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B91638992FE42185001E0709 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B91638972FE41DA3001E0709 /* ImagesEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B916389A2FE424FF001E0709 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				B916389B2FE42516001E0709 /* AskAnythingTextField.swift */,
+				B91638B92FE594B1001E0709 /* NavigationBar.swift */,
+				B91638C62FE5DF43001E0709 /* PopupPicker.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		B91638A72FE54EB7001E0709 /* ChatHistory */ = {
+			isa = PBXGroup;
+			children = (
+				B91638A82FE54EC4001E0709 /* View */,
+				B91638A92FE54EC9001E0709 /* ViewModel */,
+			);
+			path = ChatHistory;
+			sourceTree = "<group>";
+		};
+		B91638A82FE54EC4001E0709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B91638AA2FE54ED7001E0709 /* ChatHistoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B91638A92FE54EC9001E0709 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B91638AC2FE54EF4001E0709 /* ChatHistoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B91638B22FE59421001E0709 /* VideoGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				B91638B32FE5942D001E0709 /* View */,
+				B91638B42FE59432001E0709 /* ViewModel */,
+				B91638C32FE5D4E5001E0709 /* Model */,
+			);
+			path = VideoGeneration;
+			sourceTree = "<group>";
+		};
+		B91638B32FE5942D001E0709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B91638B72FE59466001E0709 /* VideoGenerationView.swift */,
+				B91638C12FE5C911001E0709 /* SettingsGenerationVideoView.swift */,
+				B9210D5C2FE5FBC900D8196C /* LoadingScreen.swift */,
+				B9210D5E2FE6032F00D8196C /* ResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B91638B42FE59432001E0709 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B91638B52FE59442001E0709 /* VideoGenerationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B91638C32FE5D4E5001E0709 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B91638C42FE5D502001E0709 /* VideoGenerationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B9210D592FE5F06900D8196C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D5A2FE5F08100D8196C /* GenerationVideoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9210D622FE617FA00D8196C /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D632FE6181500D8196C /* CoreDataStack.swift */,
+				B9210D652FE6183300D8196C /* CoreDataManager.swift */,
+				B9210D672FE6185B00D8196C /* VideoModel.xcdatamodeld */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		B9210D6A2FE61AB700D8196C /* HistoryVideo */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D6B2FE61AC700D8196C /* View */,
+				B9210D6C2FE61ACB00D8196C /* ViewModel */,
+			);
+			path = HistoryVideo;
+			sourceTree = "<group>";
+		};
+		B9210D6B2FE61AC700D8196C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D602FE6152000D8196C /* HistoryVideoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9210D6C2FE61ACB00D8196C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D6D2FE61AE500D8196C /* HistoryVideoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B9210D6F2FE61E6500D8196C /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D712FE61E9D00D8196C /* View */,
+				B9210D702FE61E9800D8196C /* ViewModel */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		B9210D702FE61E9800D8196C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D742FE6208F00D8196C /* PaywallViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B9210D712FE61E9D00D8196C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9210D722FE61EA600D8196C /* PaywallView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9BA48A42FE639B600015547 /* StateAppViews */ = {
+			isa = PBXGroup;
+			children = (
+				B9BA48A52FE639C200015547 /* Loading */,
+				B9210D6F2FE61E6500D8196C /* Paywall */,
+			);
+			path = StateAppViews;
+			sourceTree = "<group>";
+		};
+		B9BA48A52FE639C200015547 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				B9BA48A62FE639CD00015547 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		FF2FB8839F13A66720116FFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AED15F3995E7CBD451A6989D /* Pods_AIDola.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B91638502FE4162C001E0709 /* AIDola */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B916385C2FE4162D001E0709 /* Build configuration list for PBXNativeTarget "AIDola" */;
+			buildPhases = (
+				44602B80E7DB39F2AB797752 /* [CP] Check Pods Manifest.lock */,
+				B916384D2FE4162C001E0709 /* Sources */,
+				B916384E2FE4162C001E0709 /* Frameworks */,
+				B916384F2FE4162C001E0709 /* Resources */,
+				CB43A25B02624E637BB81020 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AIDola;
+			productName = AIDola;
+			productReference = B91638512FE4162C001E0709 /* AIDola.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B91638492FE4162C001E0709 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					B91638502FE4162C001E0709 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = B916384C2FE4162C001E0709 /* Build configuration list for PBXProject "AIDola" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B91638482FE4162C001E0709;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B91638522FE4162C001E0709 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B91638502FE4162C001E0709 /* AIDola */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B916384F2FE4162C001E0709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B916386D2FE4168A001E0709 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44602B80E7DB39F2AB797752 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIDola-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB43A25B02624E637BB81020 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AIDola/Pods-AIDola-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AIDola/Pods-AIDola-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIDola/Pods-AIDola-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B916384D2FE4162C001E0709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91638B12FE554CB001E0709 /* KeysManager.swift in Sources */,
+				B91638762FE41717001E0709 /* AIChatCoordinator.swift in Sources */,
+				B91638BE2FE5C0ED001E0709 /* VideoThumbnailService.swift in Sources */,
+				B9210D5B2FE5F08100D8196C /* GenerationVideoModel.swift in Sources */,
+				B9210D732FE61EA600D8196C /* PaywallView.swift in Sources */,
+				B91638922FE41B45001E0709 /* MainTabView.swift in Sources */,
+				B91638782FE41789001E0709 /* AIChatViewModel.swift in Sources */,
+				B91638982FE41DA3001E0709 /* ImagesEnum.swift in Sources */,
+				B916389E2FE4258A001E0709 /* TypealiasHelper.swift in Sources */,
+				B91638B82FE59466001E0709 /* VideoGenerationView.swift in Sources */,
+				B916387A2FE417A7001E0709 /* AIChatView.swift in Sources */,
+				B91638C72FE5DF43001E0709 /* PopupPicker.swift in Sources */,
+				B9BA48A92FE63A7800015547 /* AppStorageManager.swift in Sources */,
+				B91638A22FE427B7001E0709 /* Extension_View.swift in Sources */,
+				B9210D5F2FE6032F00D8196C /* ResultView.swift in Sources */,
+				B91638B62FE59442001E0709 /* VideoGenerationViewModel.swift in Sources */,
+				B91638892FE41A4D001E0709 /* DeviceHelper.swift in Sources */,
+				B91638812FE41811001E0709 /* CoordinatorView.swift in Sources */,
+				B9210D642FE6181500D8196C /* CoreDataStack.swift in Sources */,
+				B91638822FE41811001E0709 /* BaseCoordinator.swift in Sources */,
+				B91638832FE41811001E0709 /* Tab.swift in Sources */,
+				B9210D6E2FE61AE500D8196C /* HistoryVideoViewModel.swift in Sources */,
+				B91638C22FE5C911001E0709 /* SettingsGenerationVideoView.swift in Sources */,
+				B916389C2FE42516001E0709 /* AskAnythingTextField.swift in Sources */,
+				B91638A02FE425C4001E0709 /* Extension_Color.swift in Sources */,
+				B9210D662FE6183300D8196C /* CoreDataManager.swift in Sources */,
+				B91638AF2FE551D4001E0709 /* HistoryChatAPIService.swift in Sources */,
+				B91638BA2FE594B1001E0709 /* NavigationBar.swift in Sources */,
+				B9210D812FE6290E00D8196C /* Extension_SKProduct.swift in Sources */,
+				B9210D5D2FE5FBC900D8196C /* LoadingScreen.swift in Sources */,
+				B91638C52FE5D502001E0709 /* VideoGenerationModel.swift in Sources */,
+				B9210D752FE6208F00D8196C /* PaywallViewModel.swift in Sources */,
+				B91638A62FE4A486001E0709 /* ChatAPIService.swift in Sources */,
+				B91638AB2FE54ED7001E0709 /* ChatHistoryView.swift in Sources */,
+				B91638C02FE5C610001E0709 /* PhotoLibraryManager.swift in Sources */,
+				B91638952FE41B45001E0709 /* MainView.swift in Sources */,
+				B9210D692FE6185B00D8196C /* VideoModel.xcdatamodeld in Sources */,
+				B91638A42FE427E0001E0709 /* Extension_UIView.swift in Sources */,
+				B9210D7E2FE628C300D8196C /* SubscriptionManager.swift in Sources */,
+				B9BA48A32FE6391200015547 /* AppLauncher.swift in Sources */,
+				B91638932FE41B45001E0709 /* MainCoordinator.swift in Sources */,
+				B91638BC2FE597F4001E0709 /* GenerationVideoService.swift in Sources */,
+				B91638AD2FE54EF4001E0709 /* ChatHistoryViewModel.swift in Sources */,
+				B91638942FE41B45001E0709 /* MainViewModel.swift in Sources */,
+				B9210D612FE6152000D8196C /* HistoryVideoView.swift in Sources */,
+				B916386A2FE41686001E0709 /* AIDolaApp.swift in Sources */,
+				B9BA48A72FE639CD00015547 /* LoadingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B916385A2FE4162D001E0709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B916385B2FE4162D001E0709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B916385D2FE4162D001E0709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7C0ABAD893E4E63EF869268 /* Pods-AIDola.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photos to create AI videos.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B916385E2FE4162D001E0709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D56B702ED9B0BB0217763E /* Pods-AIDola.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photos to create AI videos.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B916384C2FE4162C001E0709 /* Build configuration list for PBXProject "AIDola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B916385A2FE4162D001E0709 /* Debug */,
+				B916385B2FE4162D001E0709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B916385C2FE4162D001E0709 /* Build configuration list for PBXNativeTarget "AIDola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B916385D2FE4162D001E0709 /* Debug */,
+				B916385E2FE4162D001E0709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B9210D672FE6185B00D8196C /* VideoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9210D682FE6185B00D8196C /* VideoModel.xcdatamodel */,
+			);
+			currentVersion = B9210D682FE6185B00D8196C /* VideoModel.xcdatamodel */;
+			path = VideoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B91638492FE4162C001E0709 /* Project object */;
+}
