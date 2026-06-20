@@ -10,7 +10,6 @@
 		44EAFF3990311387E300A876 /* Pods_AIDola.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED15F3995E7CBD451A6989D /* Pods_AIDola.framework */; };
 		B916386A2FE41686001E0709 /* AIDolaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638682FE41686001E0709 /* AIDolaApp.swift */; };
 		B916386D2FE4168A001E0709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B916386B2FE4168A001E0709 /* Assets.xcassets */; };
-		B91638762FE41717001E0709 /* AIChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638732FE41717001E0709 /* AIChatCoordinator.swift */; };
 		B91638782FE41789001E0709 /* AIChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638772FE41789001E0709 /* AIChatViewModel.swift */; };
 		B916387A2FE417A7001E0709 /* AIChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638792FE417A7001E0709 /* AIChatView.swift */; };
 		B91638812FE41811001E0709 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B916387C2FE41811001E0709 /* CoordinatorView.swift */; };
@@ -64,7 +63,6 @@
 		B91638512FE4162C001E0709 /* AIDola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIDola.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91638682FE41686001E0709 /* AIDolaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDolaApp.swift; sourceTree = "<group>"; };
 		B916386B2FE4168A001E0709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B91638732FE41717001E0709 /* AIChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatCoordinator.swift; sourceTree = "<group>"; };
 		B91638772FE41789001E0709 /* AIChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatViewModel.swift; sourceTree = "<group>"; };
 		B91638792FE417A7001E0709 /* AIChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatView.swift; sourceTree = "<group>"; };
 		B916387B2FE41811001E0709 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 			children = (
 				B91638702FE416B7001E0709 /* View */,
 				B91638712FE416BB001E0709 /* ViewModel */,
-				B91638722FE416CC001E0709 /* Coordinator */,
 			);
 			path = AIChat;
 			sourceTree = "<group>";
@@ -223,14 +220,6 @@
 				B91638772FE41789001E0709 /* AIChatViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		B91638722FE416CC001E0709 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				B91638732FE41717001E0709 /* AIChatCoordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		B916387F2FE41811001E0709 /* Coordinator */ = {
@@ -614,7 +603,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91638B12FE554CB001E0709 /* KeysManager.swift in Sources */,
-				B91638762FE41717001E0709 /* AIChatCoordinator.swift in Sources */,
 				B91638BE2FE5C0ED001E0709 /* VideoThumbnailService.swift in Sources */,
 				B9210D5B2FE5F08100D8196C /* GenerationVideoModel.swift in Sources */,
 				B9210D732FE61EA600D8196C /* PaywallView.swift in Sources */,
