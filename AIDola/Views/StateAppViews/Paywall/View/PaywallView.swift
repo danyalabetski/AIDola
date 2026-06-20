@@ -6,7 +6,8 @@ struct PaywallView: View {
     @ObservedObject var viewModel: PaywallViewModel
     let closeAction: VoidClosure
     @State private var isClose = false
-    @State private var selected = 0
+    
+    @StateObject var manager = SubscriptionManager.shared
     
     private let width = UIScreen.main.bounds.width
     private let gradient = LinearGradient(
@@ -62,21 +63,21 @@ struct PaywallView: View {
                     
                     VStack(spacing: 12) {
                         subscribeButton(
-                            perWeekPrice: "Year $1.27 / weak",
-                            price: "$ 69.99 ",
+                            perWeekPrice: "\(manager.yearlyTitle) \(manager.yearlyPerWeekPrice)",
+                            price: manager.yearlyPrice,
                             isSale: true,
-                            isSelected: selected == 0 ? true : false)
+                            isSelected: viewModel.product == manager.yearlyProduct ? true : false)
                         {
-                            selected = 0
+                            viewModel.product = manager.yearlyProduct
                         }
                         
                         subscribeButton(
-                            perWeekPrice: "Year $1.27 / weak",
-                            price: "$ 69.99 ",
+                            perWeekPrice: "\(manager.weeklyTitle) \(manager.weeklyPerWeekPrice)",
+                            price: manager.weeklyPrice,
                             isSale: false,
-                            isSelected: selected == 1 ? true : false)
+                            isSelected: viewModel.product == manager.weeklyProduct ? true : false)
                         {
-                            selected = 1
+                            viewModel.product = manager.weeklyProduct
                         }
                     }
                     
@@ -91,7 +92,21 @@ struct PaywallView: View {
                             }
                         }
                         
-                        Button(action: {}) {
+                        Button(action: {
+                            guard let product = viewModel.product else {
+                                return
+                            }
+
+                            if manager.hasActiveSubscription() {
+                                closeAction()
+                            } else {
+                                manager.purchase(product: product) { status in
+                                    if status {
+                                        closeAction()
+                                    }
+                                }
+                            }
+                        }) {
                             RoundedRectangle(cornerRadius: 24)
                                 .frame(width: width - 32, height: 50)
                                 .foregroundStyle(gradient)
@@ -121,8 +136,13 @@ struct PaywallView: View {
         .onAppear {
             SubscriptionManager.shared.fetchProducts()
             
-            Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 isClose = true
+            }
+        }
+        .onReceive(manager.$yearlyProduct) { product in
+            if viewModel.product == nil {
+                viewModel.product = product
             }
         }
     }
@@ -150,19 +170,17 @@ extension PaywallView {
                     RoundedRectangle(cornerRadius: 24)
                         .stroke(
                             isSelected
-                            ? AnyShapeStyle(
-                                LinearGradient(
-                                    colors: [
-                                        Color.color_98C6F7,
-                                        Color.color_EB5B92
-                                    ],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
+                                ? AnyShapeStyle(
+                                    LinearGradient(
+                                        colors: [
+                                            Color.color_98C6F7,
+                                            Color.color_EB5B92
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing)
                                 )
-                            )
-                            : AnyShapeStyle(Color.white.opacity(0.3)),
-                            lineWidth: 1
-                        )
+                                : AnyShapeStyle(Color.white.opacity(0.3)),
+                            lineWidth: 1)
                         .overlay(alignment: .leading) {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(perWeekPrice)

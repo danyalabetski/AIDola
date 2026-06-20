@@ -1,4 +1,5 @@
 import Combine
+import ApphudSDK
 
 struct ImageAndTitle {
     let image: String
@@ -12,4 +13,6 @@ final class PaywallViewModel: ObservableObject {
         ImageAndTitle(image: Images.Paywall.third.rawValue, title: "Simplify complex information"),
         ImageAndTitle(image: Images.Paywall.four.rawValue, title: "Create content with AI templates")
     ]
+    
+    @Published var product: ApphudProduct?
 }

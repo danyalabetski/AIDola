@@ -8,7 +8,7 @@ final class GenerationVideoService {
     private let baseURL = "https://nebulaapps.site/pixverse/api/v1/get_templates"
     private let token = KeysManager.shared.token
     private let userId = KeysManager.shared.userId
-    private let appId = Bundle.main.bundleIdentifier ?? ""
+    private let appId = "com.test.test"
 
     private init() {}
 

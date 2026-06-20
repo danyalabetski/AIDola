@@ -7,6 +7,6 @@ target 'AIDola' do
 
   # Pods for AIDola
 
-pod 'ApphudSDK', '4.0.0'
+pod 'ApphudSDK', '3.3.0'
 
 end

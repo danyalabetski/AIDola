@@ -141,7 +141,7 @@ private extension ResultView {
             Button {
                 downloadVideo()
 
-                Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { _ in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                     isDownloading = false
                 }
             } label: {

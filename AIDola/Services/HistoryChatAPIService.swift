@@ -42,7 +42,7 @@ final class HistoryChatAPIService {
     private let token = KeysManager.shared.token
 
     private let userId = KeysManager.shared.userId
-    private let appId = Bundle.main.bundleIdentifier ?? ""
+    private let appId = "com.test.test"
 
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
