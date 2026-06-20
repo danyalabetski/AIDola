@@ -122,7 +122,12 @@ struct PaywallView: View {
                                 openURL("")
                             })
                             Spacer()
-                            buttons(text: "Restore Purchases", action: {})
+                            buttons(text: "Restore Purchases", action: {
+                                manager.restorePurchases { status in
+                                    guard status else { return }
+                                    closeAction()
+                                }
+                            })
                             Spacer()
                             buttons(text: "Terms of Use", action: {
                                 openURL("")
