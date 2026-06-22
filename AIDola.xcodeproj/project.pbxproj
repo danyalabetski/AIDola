@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44EAFF3990311387E300A876 /* Pods_AIDola.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED15F3995E7CBD451A6989D /* Pods_AIDola.framework */; };
+		B90F464D2FE924C400FAF5EB /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B90F464C2FE924C400FAF5EB /* ApphudSDK */; };
 		B916386A2FE41686001E0709 /* AIDolaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638682FE41686001E0709 /* AIDolaApp.swift */; };
 		B916386D2FE4168A001E0709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B916386B2FE4168A001E0709 /* Assets.xcassets */; };
 		B91638782FE41789001E0709 /* AIChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91638772FE41789001E0709 /* AIChatViewModel.swift */; };
@@ -58,8 +58,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28D56B702ED9B0BB0217763E /* Pods-AIDola.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDola.release.xcconfig"; path = "Target Support Files/Pods-AIDola/Pods-AIDola.release.xcconfig"; sourceTree = "<group>"; };
-		AED15F3995E7CBD451A6989D /* Pods_AIDola.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIDola.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91638512FE4162C001E0709 /* AIDola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIDola.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91638682FE41686001E0709 /* AIDolaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDolaApp.swift; sourceTree = "<group>"; };
 		B916386B2FE4168A001E0709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 		B9BA48A22FE6391200015547 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
 		B9BA48A62FE639CD00015547 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B9BA48A82FE63A7800015547 /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
-		D7C0ABAD893E4E63EF869268 /* Pods-AIDola.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIDola.debug.xcconfig"; path = "Target Support Files/Pods-AIDola/Pods-AIDola.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44EAFF3990311387E300A876 /* Pods_AIDola.framework in Frameworks */,
+				B90F464D2FE924C400FAF5EB /* ApphudSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,8 +123,6 @@
 		5C311AAAE6BF10CA7FDAB6D3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D7C0ABAD893E4E63EF869268 /* Pods-AIDola.debug.xcconfig */,
-				28D56B702ED9B0BB0217763E /* Pods-AIDola.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -138,7 +133,6 @@
 				B91638622FE4163D001E0709 /* AIDola */,
 				B91638522FE4162C001E0709 /* Products */,
 				5C311AAAE6BF10CA7FDAB6D3 /* Pods */,
-				FF2FB8839F13A66720116FFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -476,14 +470,6 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
-		FF2FB8839F13A66720116FFA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AED15F3995E7CBD451A6989D /* Pods_AIDola.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -491,11 +477,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B916385C2FE4162D001E0709 /* Build configuration list for PBXNativeTarget "AIDola" */;
 			buildPhases = (
-				44602B80E7DB39F2AB797752 /* [CP] Check Pods Manifest.lock */,
 				B916384D2FE4162C001E0709 /* Sources */,
 				B916384E2FE4162C001E0709 /* Frameworks */,
 				B916384F2FE4162C001E0709 /* Resources */,
-				CB43A25B02624E637BB81020 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -530,6 +514,9 @@
 			);
 			mainGroup = B91638482FE4162C001E0709;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B90F464B2FE924C400FAF5EB /* XCRemoteSwiftPackageReference "ApphudSDK" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B91638522FE4162C001E0709 /* Products */;
 			projectDirPath = "";
@@ -550,52 +537,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		44602B80E7DB39F2AB797752 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AIDola-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB43A25B02624E637BB81020 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AIDola/Pods-AIDola-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AIDola/Pods-AIDola-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AIDola/Pods-AIDola-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B916384D2FE4162C001E0709 /* Sources */ = {
@@ -775,7 +716,6 @@
 		};
 		B916385D2FE4162D001E0709 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7C0ABAD893E4E63EF869268 /* Pods-AIDola.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -814,7 +754,6 @@
 		};
 		B916385E2FE4162D001E0709 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28D56B702ED9B0BB0217763E /* Pods-AIDola.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -873,6 +812,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B90F464B2FE924C400FAF5EB /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apphud/ApphudSDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B90F464C2FE924C400FAF5EB /* ApphudSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B90F464B2FE924C400FAF5EB /* XCRemoteSwiftPackageReference "ApphudSDK" */;
+			productName = ApphudSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B9210D672FE6185B00D8196C /* VideoModel.xcdatamodeld */ = {
